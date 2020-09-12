@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="time"></div>
+		<script>
+			function days(){
+			var d=new Date();
+			var year=d.getFullYear();//年
+			var yue=d.getMonth()+1;//月
+			if(yue<10){
+				yue='0'+yue
+			}
+			var tian=d.getDate();//日
+			if(tian<10){
+				tian='0'+tian
+			}
+			var shi=d.getHours();//时
+			if(shi<10){
+				shi='0'+shi
+			}
+			if(shi<=12){
+				console.log("上午好！")
+			}
+			if(shi>12 && shi<=18){
+				console.log("下午好！")
+			}
+			if(shi>18){
+				console.log("晚上好！")
+			}
+			var fen=d.getMinutes();//分
+			if(fen<10){
+				fen='0'+fen
+			}
+			var miao=d.getDate();//秒
+			if(miao<10){
+				miao='0'+miao
+			}
+			var zhou=d.getDay();//星期几
+			switch(zhou){
+			case 0:
+				zhou="日"
+				break;
+			case 1:
+				zhou="一"
+				break;
+			case 2:
+				zhou="二"
+				break;
+			case 3:
+				zhou="三"
+				break;
+			case 4:
+				zhou='四'
+			case 4:
+				break;
+				zhou="五"
+			case 5:
+				break;
+				zhou="六"
+			case 6:
+				break;
+			default:
+				break;
+			}
+			return "今天是"+year+'年'+yue+'月'+tian+'日'+shi+'点'+fen+'分'
+			}
+			setInterval(days()){
+				document.time(今天是"+year+'年'+yue+'月'+tian+'日'+shi+'点'+fen+'分)}
+				
+		</script>
+	</body>
+</html>
